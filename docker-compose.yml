@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - simplitec-network
+    volumes:
+      - ./:/srv/app
+    ports:
+      - ${DEV_API_PORT}:${DEV_API_PORT}
+    depends_on:
+      - postgres
+    command: npm run dev
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    env_file: .env
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    networks:
+      - simplitec-network
+    ports:
+      - ${DATABASE_PORT}:${DATABASE_PORT}
+
+networks:
+  simplitec-network:
+    driver: bridge
+
+volumes:
+  simplitec-data: {}
