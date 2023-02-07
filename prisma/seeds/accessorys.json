@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Accesorio 1",
+        "vehicleId":1,
+        "dealerId":1
+    },
+    {
+        "name": "Accesorio 2",
+        "vehicleId":2,
+        "dealerId":1
+    },
+    {
+        "name": "Accesorio 3",
+        "vehicleId":3,
+        "dealerId":1
+    },
+    {
+        "name": "Accesorio 4",
+        "vehicleId":4,
+        "dealerId":1
+    },
+    {
+        "name": "Accesorio 5",
+        "vehicleId":5,
+        "dealerId":1
+    },
+    {
+        "name": "Accesorio 6",
+        "vehicleId":1,
+        "dealerId":2
+    },
+    {
+        "name": "Accesorio 4",
+        "vehicleId":2,
+        "dealerId":2
+    },
+    {
+        "name": "Accesorio 8",
+        "vehicleId":3,
+        "dealerId":2
+    },
+    {
+        "name": "Accesorio 9",
+        "vehicleId":4,
+        "dealerId":2
+    },
+    {
+        "name": "Accesorio 10",
+        "vehicleId":5,
+        "dealerId":2
+    },
+    {
+        "name": "Accesorio 11",
+        "vehicleId":1,
+        "dealerId":3
+    },
+    {
+        "name": "Accesorio 13",
+        "vehicleId":2,
+        "dealerId":3
+    },
+    {
+        "name": "Accesorio 14",
+        "vehicleId":1,
+        "dealerId":4
+    },
+    {
+        "name": "Accesorio 15",
+        "vehicleId":3,
+        "dealerId":4
+    },
+    {
+        "name": "Accesorio 16",
+        "vehicleId":5,
+        "dealerId":4
+    },
+    {
+        "name": "Accesorio 17",
+        "vehicleId":2,
+        "dealerId":5
+    },
+    {
+        "name": "Accesorio 12",
+        "vehicleId":5,
+        "dealerId":5
+    }
+]
