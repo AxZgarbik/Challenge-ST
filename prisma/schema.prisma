@@ -51,7 +51,6 @@ model Vehicles{
   dealerId     Int
   brand        String
   var          Variants[]
-  photo        String[]
   year         Int
   name         String
   post         VehiclesOnPosts[]
@@ -59,7 +58,7 @@ model Vehicles{
   transmission Transmission   
   doors        Int
   fuelType     FuelType   
-  bodyType     Body[]
+  bodyType     Body
   identifier   String @unique
 }
 
@@ -79,6 +78,7 @@ model Variants{
   reserved    Int
   vehicle     Vehicles @relation(fields: [vehicleId],references: [id])    
   vehicleId   Int
+  photo       String[]
 }
 
 model VehiclesOnPosts{
@@ -109,4 +109,5 @@ enum Body{
   Compact
   Sedan
   SUV
+  Pickup
 }

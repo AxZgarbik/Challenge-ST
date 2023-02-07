@@ -1,0 +1,289 @@
+[
+    {
+        "name":"X 1.5 6M/T 5P",
+        "price":3599000,
+        "reserved":50000,
+        "vehicleId":1,
+        "photo":[]
+    },
+    {
+        "name":"XLS PACK 1.5 6M/T 5P",
+        "price":4234000,
+        "reserved":50000,
+        "vehicleId":1,
+        "photo":[]
+    },
+    {
+        "name":"X 1.5 6M/T 4P",
+        "price":3716000,
+        "reserved":50000,
+        "vehicleId":2,
+        "photo":[]
+    },
+    {
+        "name":"XLS PACK 1.5 6M/T 4P",
+        "price":4351000,
+        "reserved":50000,
+        "vehicleId":2,
+        "photo":[]
+    },
+    {
+        "name":"XS MT",
+        "price":4522000,
+        "reserved":50000,
+        "vehicleId":3,
+        "photo":[]
+    },
+    {
+        "name":"XLS MT",
+        "price":4992000,
+        "reserved":50000,
+        "vehicleId":3,
+        "photo":[]
+    },
+    {
+        "name":"XLS MT",
+        "price":509500,
+        "reserved":50000,
+        "vehicleId":4,
+        "photo":[]
+    },
+    {
+        "name":"L1H1 2.8 TDI 6AT 3A",
+        "price":14992000,
+        "reserved":50000,
+        "vehicleId":5,
+        "photo":[]
+    },
+    {
+        "name":"L2H2 2.8 TDI 6AT 3A",
+        "price":1559500,
+        "reserved":50000,
+        "vehicleId":5,
+        "photo":[]
+    },
+    {
+        "name":"2.0 XLI MT",
+        "price":5582000,
+        "reserved":50000,
+        "vehicleId":6,
+        "photo":[]
+    },
+    {
+        "name":"HEV 1.8 XEI eCVT",
+        "price":8022000,
+        "reserved":50000,
+        "vehicleId":7,
+        "photo":[]
+    },
+    {
+        "name":"HEV 1.8 SEG eCVT",
+        "price":9268000,
+        "reserved":50000,
+        "vehicleId":7,
+        "photo":[]
+    },
+    {
+        "name":"HV 2.5 eCVT",
+        "price":10268000,
+        "reserved":50000,
+        "vehicleId":8,
+        "photo":[]
+    },
+    {
+        "name":"DX 4X2",
+        "price":6939000,
+        "reserved":50000,
+        "vehicleId":9,
+        "photo":[]
+    },
+    {
+        "name":"DX 4X4",
+        "price":8370000,
+        "reserved":50000,
+        "vehicleId":9,
+        "photo":[]
+    },
+    {
+        "name":"2.0 XLI CVT",
+        "price":7720000,
+        "reserved":50000,
+        "vehicleId":10,
+        "photo":[]
+    },
+    {
+        "name":"2.0 XEI CVT",
+        "price":8897000,
+        "reserved":50000,
+        "vehicleId":10,
+        "photo":[]
+    },
+    {
+        "name":"2.0 SEG CVT",
+        "price":10061000,
+        "reserved":50000,
+        "vehicleId":10,
+        "photo":[]
+    },
+    {
+        "name":"HV 1.8 eCVT",
+        "price":10061000,
+        "reserved":50000,
+        "vehicleId":11,
+        "photo":[]
+    },
+    {
+        "name":"HV AWD Limited",
+        "price":11061000,
+        "reserved":50000,
+        "vehicleId":12,
+        "photo":[]
+    },
+    {
+        "name":"SRX 2.8 TDI 6 A/T 7A",
+        "price":17163000,
+        "reserved":50000,
+        "vehicleId":13,
+        "photo":[]
+    },
+    {
+        "name":"DIAMOND 2.8 TDI 6 AT 7A",
+        "price":18014000,
+        "reserved":50000,
+        "vehicleId":13,
+        "photo":[]
+    },
+    {
+        "name":"VX",
+        "price":15014000,
+        "reserved":50000,
+        "vehicleId":14,
+        "photo":[]
+    },
+    {
+        "name":"1.5 6M/T",
+        "price":3432000,
+        "reserved":50000,
+        "vehicleId":15,
+        "photo":[]
+    },
+    {
+        "name":"2.8 TDI 6AT 10A",
+        "price":12281500,
+        "reserved":50000,
+        "vehicleId":16,
+        "photo":[]
+    },
+    {
+        "name":"2.8 TDI 6 AT 7A",
+        "price":18875000,
+        "reserved":50000,
+        "vehicleId":17,
+        "photo":[]
+    },
+    {
+        "name":"VX",
+        "price":18875000,
+        "reserved":50000,
+        "vehicleId":18,
+        "photo":[]
+    },
+    {
+        "name":"DX 4x2",
+        "price":8215000,
+        "reserved":50000,
+        "vehicleId":19,
+        "photo":[]
+    },
+    {
+        "name":"SRV 4x2",
+        "price":10913000,
+        "reserved":50000,
+        "vehicleId":19,
+        "photo":[]
+    },
+    {
+        "name":"DX 4x4",
+        "price":9576000,
+        "reserved":50000,
+        "vehicleId":19,
+        "photo":[]
+    },
+    {
+        "name":"SR 4x4",
+        "price":11188000,
+        "reserved":50000,
+        "vehicleId":19,
+        "photo":[]
+    },
+    {
+        "name":"DX 4x2",
+        "price":7345000,
+        "reserved":50000,
+        "vehicleId":20,
+        "photo":[]
+    },
+    {
+        "name":"DX 4x4",
+        "price":8746000,
+        "reserved":50000,
+        "vehicleId":20,
+        "photo":[]
+    },
+    {
+        "name":"2.0 CVT",
+        "price":8462000,
+        "reserved":50000,
+        "vehicleId":21,
+        "photo":[]
+    },
+    {
+        "name":"DX 4x2",
+        "price":6939000,
+        "reserved":50000,
+        "vehicleId":22,
+        "photo":[]
+    },
+    {
+        "name":"DX 4x4",
+        "price":8370000,
+        "reserved":50000,
+        "vehicleId":22,
+        "photo":[]
+    },
+    {
+        "name":"X 1.5 6M/T 5P",
+        "price":3599000,
+        "reserved":50000,
+        "vehicleId":23,
+        "photo":[]
+    },
+    {
+        "name":"XLS PACK 1.5 6M/T 5P",
+        "price":4234000,
+        "reserved":50000,
+        "vehicleId":23,
+        "photo":[]
+    },
+    {
+        "name":"GR-S",
+        "price":14234000,
+        "reserved":50000,
+        "vehicleId":24,
+        "photo":[]
+    },
+    {
+        "name":"XS MT",
+        "price":4522000,
+        "reserved":50000,
+        "vehicleId":25,
+        "photo":[]
+    },
+    {
+        "name":"XLS MT",
+        "price":4992000,
+        "reserved":50000,
+        "vehicleId":25,
+        "photo":[]
+    }
+]
