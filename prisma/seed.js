@@ -1,7 +1,8 @@
 const dealers = require("./seeds/dealers.json");
 const vehicles= require("./seeds/vehicles.json");
 const accessorys= require("./seeds/accessorys.json");
-const posts=require("./seeds/posts.json")
+const posts=require("./seeds/posts.json");
+const variants=require("./seeds/variants.json")
 const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient()
@@ -46,6 +47,11 @@ async function main(){
                 }
             })
         }
+    }
+    for (let variant of variants){
+        await prisma.variants.create({
+            data: variant
+        });
     }
 }
 

@@ -5,7 +5,7 @@ CREATE TYPE "Transmission" AS ENUM ('Manual', 'Automatic');
 CREATE TYPE "FuelType" AS ENUM ('Nafta', 'Diesel', 'Electrico', 'Hibrido');
 
 -- CreateEnum
-CREATE TYPE "Body" AS ENUM ('Furgon', 'Hatckback', 'Compact', 'Sedan', 'SUV');
+CREATE TYPE "Body" AS ENUM ('Furgon', 'Hatckback', 'Compact', 'Sedan', 'SUV', 'Pickup');
 
 -- CreateTable
 CREATE TABLE "Dealer" (
@@ -46,13 +46,12 @@ CREATE TABLE "Vehicles" (
     "id" SERIAL NOT NULL,
     "dealerId" INTEGER NOT NULL,
     "brand" TEXT NOT NULL,
-    "photo" TEXT[],
     "year" INTEGER NOT NULL,
     "name" TEXT NOT NULL,
     "transmission" "Transmission" NOT NULL,
     "doors" INTEGER NOT NULL,
     "fuelType" "FuelType" NOT NULL,
-    "bodyType" "Body"[],
+    "bodyType" "Body" NOT NULL,
     "identifier" TEXT NOT NULL,
 
     CONSTRAINT "Vehicles_pkey" PRIMARY KEY ("id")
@@ -75,6 +74,7 @@ CREATE TABLE "Variants" (
     "price" INTEGER NOT NULL,
     "reserved" INTEGER NOT NULL,
     "vehicleId" INTEGER NOT NULL,
+    "photo" TEXT[],
 
     CONSTRAINT "Variants_pkey" PRIMARY KEY ("id")
 );
