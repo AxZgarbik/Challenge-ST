@@ -11,6 +11,6 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
-app.use("/api/v1/dealer",v1DealerRouter)
+app.use("/",v1DealerRouter)
 
 app.listen(PORT , () => {console.log(`Server listening on port ${PORT}`)})

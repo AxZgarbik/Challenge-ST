@@ -1,12 +1,12 @@
 const dealerServices = require("../services/dealerServices");
 
-const getAllDealer = (req,res) => {
-    const allDealer = dealerServices.getAllDealer()
-    res.send({status:"OK", data: allDealer})
+const getAllDealer = async (req,res) => {
+    const allDealer = await dealerServices.getAllDealer()
+    res.send( allDealer)
 
 };
 
-const getOneDealer = (req,res) => {
+const getDealerById = async (req,res) => {
     const{
         params: {id}
     } = req
@@ -14,40 +14,40 @@ const getOneDealer = (req,res) => {
     if(!id){
         return res.status(400).json({msg:"not found"});
     }
-    const oneDealer = dealerServices.getOneDealer(req.params.id);
+    const oneDealer = await dealerServices.getDealerById(req.params.id);
     res.send({status:"OK", data: oneDealer})
 
 }
 
-const createOneDealer = (req,res) => {
+const createDealer = (req,res) => {
     const {body} = req;
     if(!body.name,!body.dir){
         return res.status(400).json({msg:"No se pudo crear el Dealer"})
     }
     const newDealer = {name:body.name,dir:body.dir};
-    const createOneDealer = dealerServices.createOneDealer(newDealer);
-    res.status(201).send({status:"OK", data:createOneDealer})
+    const createDealer = dealerServices.createDealer(newDealer);
+    res.status(201).send({status:"OK", data:createDealer})
 };
 
-const updateOneDealer = (req,res) => {
+const updateDealer = (req,res) => {
     const {body, params:{id}} = req
     if(!id){
         return res.status(400).json({msg:"No se encontro el Dealer"})
     }
-    const updateOneDealer = dealerServices.updateOneDealer(id,body);
-    res.status(200).send({status:"OK", data:updateOneDealer})
+    const updateDealer = dealerServices.updateDealer(id,body);
+    res.status(200).send({status:"OK", data:updateDealer})
 }
 
-const deleteOneDealer = (req,res) => {
+const deleteDealer = (req,res) => {
     const { params: {id}} = req;
     if(id){
         return res.status(400).json({msg:"No se encontro el Dealer"})
     }
-    const deleteOneDealer = dealerServices.deleteOneDealer(id)
-    res.status(200).send({status:"OK", data:deleteOneDealer})
+    const deleteDealer = dealerServices.deleteDealer(id)
+    res.status(200).send({status:"OK", data:deleteDealer})
 }
 
-const getOneVehicle = (req,res) => {
+const getVehicleById = (req,res) => {
     const{
         params: {id}
     } = req
@@ -55,11 +55,11 @@ const getOneVehicle = (req,res) => {
     if(!id){
         return res.status(400).json({msg:"not found"});
     }
-    const oneVehicle = dealerServices.getOneVehicle(req.params.id);
+    const oneVehicle = dealerServices.getVehicleById(req.params.id);
     res.send({status:"OK", data: oneVehicle})
 }
 
-const createOneVehicle = (req,res) => {
+const createVehicle = (req,res) => {
     const {body} = req;
     if(
         !body.dealer,
@@ -82,29 +82,29 @@ const createOneVehicle = (req,res) => {
         fuelType:body.fuelType,
         bodyType:body.bodyType,
         identifier:body.identifier};
-    const createOneVehicle = dealerServices.createOneVehicle(newVehicle);
-    res.status(201).send({status:"OK", data:createOneVehicle})
+    const createVehicle = dealerServices.createVehicle(newVehicle);
+    res.status(201).send({status:"OK", data:createVehicle})
 };
 
-const updateOneVehicle = (req,res) => {
+const updateVehicle = (req,res) => {
     const {body, params:{id}} = req
     if(!id){
         return res.status(400).json({msg:"No se encontro el Vehiculo"})
     }
-    const updateOneVehicle = dealerServices.updateOneVehicle(id,body);
-    res.status(200).send({status:"OK", data:updateOneVehicle})
+    const updateVehicle = dealerServices.updateVehicle(id,body);
+    res.status(200).send({status:"OK", data:updateVehicle})
 }
 
-const deleteOneVehicle = (req,res) => {
+const deleteVehicle = (req,res) => {
     const { params: {id}} = req;
     if(id){
         return res.status(400).json({msg:"No se encontro el Vehiculo"})
     }
-    const deleteOneVehicle= dealerServices.deleteOneVehicle(id)
-    res.status(200).send({status:"OK", data:deleteOneVehicle})
+    const deleteVehicle= dealerServices.deleteVehicle(id)
+    res.status(200).send({status:"OK", data:deleteVehicle})
 }
 
-const getOneAccesory = (req,res) => {
+const getAccesory = (req,res) => {
     const{
         params: {id}
     } = req
@@ -112,11 +112,11 @@ const getOneAccesory = (req,res) => {
     if(!id){
         return res.status(400).json({msg:"not found"});
     }
-    const oneAccesory = dealerServices.getOneAccesory(req.params.id);
+    const oneAccesory = dealerServices.getAccesoryById(req.params.id);
     res.send({status:"OK", data: oneAccesory})
 }
 
-const createOneAccesory = (req,res) => {
+const createAccesory = (req,res) => {
     const {body} = req;
     if(
         !body.dealerId,
@@ -130,29 +130,29 @@ const createOneAccesory = (req,res) => {
         name:body.name,
         vehicleId:body.vehicleId
     }
-    const createOneAccesory = dealerServices.createOneAccesory(newAccesory);
-    res.status(201).send({status:"OK", data:createOneAccesory})
+    const createAccesory = dealerServices.createAccesory(newAccesory);
+    res.status(201).send({status:"OK", data:createAccesory})
 };
 
-const updateOneAccesory = (req,res) => {
+const updateAccesory = (req,res) => {
     const {body, params:{id}} = req
     if(!id){
         return res.status(400).json({msg:"No se encontro el Accesorio"})
     }
-    const updateOneAccesory = dealerServices.updateOneAccesory(id,body);
-    res.status(200).send({status:"OK", data:updateOneAccesory})
+    const updateAccesory = dealerServices.updateAccesory(id,body);
+    res.status(200).send({status:"OK", data:updateAccesory})
 }
 
-const deleteOneAccesory = (req,res) => {
+const deleteAccesory = (req,res) => {
     const { params: {id}} = req;
     if(id){
         return res.status(400).json({msg:"No se encontro el Accesorio"})
     }
-    const deleteOneAccesory= dealerServices.deleteOneAccesory(id)
-    res.status(200).send({status:"OK", data:deleteOneAccesory})
+    const deleteAccesory= dealerServices.deleteAccesory(id)
+    res.status(200).send({status:"OK", data:deleteAccesory})
 }
 
-const getOnePost = (req,res) => {
+const getPostById = (req,res) => {
     const{
         params: {id}
     } = req
@@ -160,11 +160,11 @@ const getOnePost = (req,res) => {
     if(!id){
         return res.status(400).json({msg:"not found"});
     }
-    const onePost = dealerServices.getOnePost(req.params.id);
+    const onePost = dealerServices.getPostById(req.params.id);
     res.send({status:"OK", data: onePost})
 }
 
-const createOnePost = (req,res) => {
+const createPost = (req,res) => {
     const {body} = req;
     if(
         !body.dealerId,
@@ -180,28 +180,28 @@ const createOnePost = (req,res) => {
         date:body.date,
         description:body.description
     }
-    const createOnePost = dealerServices.createOnePost(newPost);
-    res.status(201).send({status:"OK", data:createOnePost})
+    const createPost = dealerServices.createPost(newPost);
+    res.status(201).send({status:"OK", data:createPost})
 };
 
-const updateOnePost = (req,res) => {
+const updatePost = (req,res) => {
     const {body, params:{id}} = req
     if(!id){
         return res.status(400).json({msg:"No se encontro la publicacion"})
     }
-    const updateOnePost = dealerServices.updateOnePost(id,body);
-    res.status(200).send({status:"OK", data:updateOnePost})
+    const updatePost = dealerServices.updatePost(id,body);
+    res.status(200).send({status:"OK", data:updatePost})
 }
 
-const deleteOnePost = (req,res) => {
+const deletePost = (req,res) => {
     const { params: {id}} = req;
     if(id){
         return res.status(400).json({msg:"No se encontro la Publicacion"})
     }
-    const deleteOnePost= dealerServices.deleteOnePost(id)
-    res.status(200).send({status:"OK", data:deleteOnePost})
+    const deletePost= dealerServices.deletePost(id)
+    res.status(200).send({status:"OK", data:deletePost})
 }
-const getOneLead = (req,res) => {
+const getLeadById = (req,res) => {
     const{
         params: {id}
     } = req
@@ -209,11 +209,11 @@ const getOneLead = (req,res) => {
     if(!id){
         return res.status(400).json({msg:"not found"});
     }
-    const oneLead = dealerServices.getOneLead(req.params.id);
+    const oneLead = dealerServices.getLeadById(req.params.id);
     res.send({status:"OK", data: oneLead})
 }
 
-const createOneLead = (req,res) => {
+const createLead = (req,res) => {
     const {body} = req;
     if(
         !body.email,
@@ -233,37 +233,37 @@ const createOneLead = (req,res) => {
         terms:body.terms,
         filing:body.filing
     }
-    const createOnePost = dealerServices.createOnePost(newPost);
-    res.status(201).send({status:"OK", data:createOnePost})
+    const createPost = dealerServices.createPost(newPost);
+    res.status(201).send({status:"OK", data:createPost})
 };
 
-const updateOneLead = (req,res) => {
-    const onePost = dealerServices.updateOnePost()
+const updateLead = (req,res) => {
+    const onePost = dealerServices.updatePost()
 }
 
-const deleteOneLead = (req,res) => {
-    const onePost = dealerServices.deleteOnePost()
+const deleteLead = (req,res) => {
+    const onePost = dealerServices.deletePost()
 }
 module.exports = {
     getAllDealer,
-    getOneDealer,
-    createOneDealer,
-    updateOneDealer,
-    deleteOneDealer,
-    getOneVehicle,
-    createOneVehicle,
-    updateOneVehicle,
-    deleteOneVehicle,
-    getOneAccesory,
-    createOneAccesory,
-    updateOneAccesory,
-    deleteOneAccesory,
-    getOnePost,
-    createOnePost,
-    updateOnePost,
-    deleteOnePost,
-    getOneLead,
-    createOneLead,
-    updateOneLead,
-    deleteOneLead
+    getDealerById,
+    createDealer,
+    updateDealer,
+    deleteDealer,
+    getVehicleById,
+    createVehicle,
+    updateVehicle,
+    deleteVehicle,
+    getAccesory,
+    createAccesory,
+    updateAccesory,
+    deleteAccesory,
+    getPostById,
+    createPost,
+    updatePost,
+    deletePost,
+    getLeadById,
+    createLead,
+    updateLead,
+    deleteLead
 }

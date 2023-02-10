@@ -1,29 +1,29 @@
 const prisma = require("../database/database.js")
 
-const getAllDealer = () => {
-    const allDealers = prisma.dealers.findMany();
+const getAllDealer = async () => {
+    const allDealers = await prisma.dealer.findMany();
     return allDealers;
-}
+};
 
-const getOneDealer = (id) => {
-    const dealer = prisma.dealers.findUnique({where:{id:id}});
+
+const getDealerById = async (id) => {
+    const dealer = await prisma.dealer.findUnique({where:{id:parseInt(id)}});
     if (!dealer){
         return;
     }
     return dealer;
-
 }
 
-const createOneDealer = (newDealer) => {
-    const dealer = prisma.dealers.create({
+const createDealer = async (newDealer) => {
+    const dealer = await prisma.dealer.create({
         data:newDealer
     });
     return dealer;
 
 }
 
-const updateOneDealer = (id,body) => {
-    const dealer = prisma.dealers.update({
+const updateDealer = (id,body) => {
+    const dealer = prisma.dealer.update({
         where:{id:id},
         data:body
     });
@@ -34,8 +34,8 @@ const updateOneDealer = (id,body) => {
 
 }
 
-const deleteOneDealer = (id) => {
-    const dealer = prisma.dealers.delete({
+const deleteDealer = (id) => {
+    const dealer = prisma.dealer.delete({
         where:{id:id},
     });
     if(!dealer){
@@ -44,7 +44,7 @@ const deleteOneDealer = (id) => {
     return dealer;
 }
 
-const getOneVehicle = (id) => {
+const getVehicleById = (id) => {
     const vehicle = prisma.vehicles.findUnique({where:{id:id}});
     if (!vehicle){
         return;
@@ -53,7 +53,7 @@ const getOneVehicle = (id) => {
 
 }
 
-const createOneVehicle = (newVehicle) => {
+const createVehicle = (newVehicle) => {
     const vehicle = prisma.vehicles.create({
         data:newVehicle
     });
@@ -61,7 +61,7 @@ const createOneVehicle = (newVehicle) => {
 
 }
 
-const updateOneVehicle = (id,body) => {
+const updateVehicle = (id,body) => {
     const vehicle = prisma.vehicles.update({
         where:{id:id},
         data:body
@@ -73,7 +73,7 @@ const updateOneVehicle = (id,body) => {
 
 }
 
-const deleteOneVehicle = (id) => {
+const deleteVehicle = (id) => {
     const vehicle = prisma.vehicles.delete({
         where:{id:id},
     });
@@ -83,7 +83,7 @@ const deleteOneVehicle = (id) => {
     return vehicle;
 }
 
-const getOneAccesory = (id) => {
+const getAccesoryById = (id) => {
     const accesory = prisma.accesories.findUnique({where:{id:id}});
     if (!accesory){
         return;
@@ -92,7 +92,7 @@ const getOneAccesory = (id) => {
 
 }
 
-const createOneAccesory = (newAccesory) => {
+const createAccesory = (newAccesory) => {
     const accesory = prisma.accesories.create({
         data:newAccesory
     });
@@ -100,7 +100,7 @@ const createOneAccesory = (newAccesory) => {
 
 }
 
-const updateOneAccesory = (id,body) => {
+const updateAccesory = (id,body) => {
     const accesory = prisma.accesories.update({
         where:{id:id},
         data:body
@@ -112,7 +112,7 @@ const updateOneAccesory = (id,body) => {
 
 }
 
-const deleteOneAccesory = (id) => {
+const deleteAccesory = (id) => {
     const accesory = prisma.accesories.delete({
         where:{id:id},
     });
@@ -122,7 +122,7 @@ const deleteOneAccesory = (id) => {
     return accesory;
 }
 
-const getOnePost = (id) => {
+const getPostById = (id) => {
     const post = prisma.posts.findUnique({where:{id:id}});
     if (!post){
         return;
@@ -131,7 +131,7 @@ const getOnePost = (id) => {
 
 }
 
-const createOnePost = (newPost) => {
+const createPost = (newPost) => {
     const post = prisma.posts.create({
         data:newPost
     });
@@ -139,7 +139,7 @@ const createOnePost = (newPost) => {
 
 }
 
-const updateOnePost = (id,body) => {
+const updatePost = (id,body) => {
     const post = prisma.posts.update({
         where:{id:id},
         data:body
@@ -151,7 +151,7 @@ const updateOnePost = (id,body) => {
 
 }
 
-const deleteOnePost = (id) => {
+const deletePost = (id) => {
     const post = prisma.posts.delete({
         where:{id:id},
     });
@@ -161,7 +161,7 @@ const deleteOnePost = (id) => {
     return post;
 }
 
-const getOneLead = (id) => {
+const getLeadById = (id) => {
     const post = prisma.leads.findUnique({where:{id:id}});
     if (!post){
         return;
@@ -170,7 +170,7 @@ const getOneLead = (id) => {
 
 }
 
-const createOneLead = (newPost) => {
+const createLead = (newPost) => {
     const post = prisma.leads.create({
         data:newPost
     });
@@ -178,7 +178,7 @@ const createOneLead = (newPost) => {
 
 }
 
-const updateOneLead = (id,body) => {
+const updateLead = (id,body) => {
     const post = prisma.leads.update({
         where:{id:id},
         data:body
@@ -190,7 +190,7 @@ const updateOneLead = (id,body) => {
 
 }
 
-const deleteOneLead = (id) => {
+const deleteLead = (id) => {
     const post = prisma.leads.delete({
         where:{id:id},
     });
@@ -202,24 +202,24 @@ const deleteOneLead = (id) => {
 
 module.exports = {
     getAllDealer,
-    getOneDealer,
-    createOneDealer,
-    updateOneDealer,
-    deleteOneDealer,
-    getOneVehicle,
-    createOneVehicle,
-    updateOneVehicle,
-    deleteOneVehicle,
-    getOneAccesory,
-    createOneAccesory,
-    updateOneAccesory,
-    deleteOneAccesory,
-    getOnePost,
-    createOnePost,
-    updateOnePost,
-    deleteOnePost,
-    getOneLead,
-    createOneLead,
-    updateOneLead,
-    deleteOneLead,
+    getDealerById,
+    createDealer,
+    updateDealer,
+    deleteDealer,
+    getVehicleById,
+    createVehicle,
+    updateVehicle,
+    deleteVehicle,
+    getAccesoryById,
+    createAccesory,
+    updateAccesory,
+    deleteAccesory,
+    getPostById,
+    createPost,
+    updatePost,
+    deletePost,
+    getLeadById,
+    createLead,
+    updateLead,
+    deleteLead,
 }
