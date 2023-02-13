@@ -3,18 +3,26 @@ const router = express.Router();
 const dealerController = require("../../controllers/dealerController");
 router
     //Dealer
-    .get('/',dealerController.getAllDealer)
-    .get('/dealer/get/:id',dealerController.getDealerById)
-    .post('/dealer/create/',dealerController.createDealer)
-    .patch('/dealer/update/:id',dealerController.updateDealer)
-    .delete('/dealer/delete/:id',dealerController.deleteDealer)
+    .get('/dealer',dealerController.getAllDealer)
+    .get('/dealer/:id',dealerController.getDealerById)
+    .post('/dealer/',dealerController.createDealer)
+    .patch('/dealer/:id',dealerController.updateDealer)
+    .delete('/dealer/:id',dealerController.deleteDealer)
 
     //Vehicle
-
-    .get('/dealer/:id/vehicles/get/:id',dealerController.getVehicleById)
+    .get('/',dealerController.getAllVehicles)
+    .get('/dealer/:id/vehicles/',dealerController.getAllVehiclesByDealerId)
+    .get('/vehicles/:id',dealerController.getVehicleById)
     .post('/dealer/:id/vehicles/',dealerController.createVehicle)
-    .patch('/dealer/:id/vehicles/update/:id',dealerController.updateVehicle)
-    .delete('/dealer/:id/vehicles/delete/:id',dealerController.deleteVehicle)
+    .patch('/vehicles/:id',dealerController.updateVehicle)
+    .delete('/vehicles/:id',dealerController.deleteVehicle)
+
+    //Variants
+    .get('/vehicle/:id/variants/',dealerController.getAllVariants)
+    .get('/vehicle/:id/variants/:id',dealerController.getVariantById)
+    .post('/vehicle/:id/variants/',dealerController.createVariant)
+    .patch('/vehicle/:id/variants/:id',dealerController.updateVariant)
+    .delete('/vehicle/:id/variants/:id',dealerController.deleteVariant)
 
     //Accesory
 

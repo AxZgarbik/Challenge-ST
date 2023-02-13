@@ -2,7 +2,7 @@ const dealerServices = require("../services/dealerServices");
 
 const getAllDealer = async (req,res) => {
     const allDealer = await dealerServices.getAllDealer()
-    res.send( allDealer)
+    res.send(allDealer)
 
 };
 
@@ -47,7 +47,20 @@ const deleteDealer = (req,res) => {
     res.status(200).send({status:"OK", data:deleteDealer})
 }
 
-const getVehicleById = (req,res) => {
+
+const getAllVariants = async (req,res) => {
+    const{
+        params: {id}
+    } = req
+
+    if(!id){
+        return res.status(400).json({msg:"not found"});
+    }
+    const allVariants = await dealerServices.getAllVariants(req.params.id);
+    res.send({status:"OK", data: allVariants})
+}
+
+const getVariantById = (req,res) => {
     const{
         params: {id}
     } = req
@@ -56,6 +69,79 @@ const getVehicleById = (req,res) => {
         return res.status(400).json({msg:"not found"});
     }
     const oneVehicle = dealerServices.getVehicleById(req.params.id);
+    res.send({status:"OK", data: oneVehicle})
+}
+
+const createVariant = (req,res) => {
+    const {body} = req;
+    if(
+        !body.dealer,
+        !body.brand,
+        !body.year,
+        !body.transmission,
+        !body.doors,
+        !body.fuelType,
+        !body.bodyType,
+        !body.identifier
+        ){
+        return res.status(400).json({msg:"No se pudo crear el Vehiculo"})
+    }
+    const newVehicle = {
+        dealer:body.dealer,
+        brand:body.brand,
+        year:body.year,
+        transmission:body.transmission,
+        doors:body.doors,
+        fuelType:body.fuelType,
+        bodyType:body.bodyType,
+        identifier:body.identifier};
+    const createVehicle = dealerServices.createVehicle(newVehicle);
+    res.status(201).send({status:"OK", data:createVehicle})
+};
+
+const updateVariant = (req,res) => {
+    const {body, params:{id}} = req
+    if(!id){
+        return res.status(400).json({msg:"No se encontro el Vehiculo"})
+    }
+    const updateVehicle = dealerServices.updateVehicle(id,body);
+    res.status(200).send({status:"OK", data:updateVehicle})
+}
+
+const deleteVariant = (req,res) => {
+    const { params: {id}} = req;
+    if(id){
+        return res.status(400).json({msg:"No se encontro el Vehiculo"})
+    }
+    const deleteVehicle= dealerServices.deleteVehicle(id)
+    res.status(200).send({status:"OK", data:deleteVehicle})
+}
+
+const getAllVehicles = async (req,res) => {
+    const allVehicles = await dealerServices.getAllVehicles(req.params.id);
+    res.send({status:"OK", data: allVehicles})
+}
+const getAllVehiclesByDealerId = async (req,res) => {
+    const{
+        params: {id}
+    } = req
+
+    if(!id){
+        return res.status(400).json({msg:"not found"});
+    }
+    const allVehicles = await dealerServices.getAllVehicles(req.params.id);
+    res.send({status:"OK", data: allVehicles})
+}
+
+const getVehicleById = async (req,res) => {
+    const{
+        params: {id}
+    } = req
+
+    if(!id){
+        return res.status(400).json({msg:"not found"});
+    }
+    const oneVehicle = await dealerServices.getVehicleById(req.params.id);
     res.send({status:"OK", data: oneVehicle})
 }
 
@@ -104,7 +190,7 @@ const deleteVehicle = (req,res) => {
     res.status(200).send({status:"OK", data:deleteVehicle})
 }
 
-const getAccesory = (req,res) => {
+const getAccesoryById = (req,res) => {
     const{
         params: {id}
     } = req
@@ -214,6 +300,7 @@ const getLeadById = (req,res) => {
 }
 
 const createLead = (req,res) => {
+    const dealerId = Number(req.params.id)
     const {body} = req;
     if(
         !body.email,
@@ -221,20 +308,28 @@ const createLead = (req,res) => {
         !body.lastName,
         !body.phone,
         !body.terms,
-        !body.filing
+        !body.filing,
+        !body.vehicleId
         ){
-        return res.status(400).json({msg:"No se pudo crear la Publicacion"})
+        return res.status(400).json({msg:"No se pudo crear el Lead"})
     }
-    const newPost = {
+    const newLead = {
         email:body.email,
         name:body.name,
-        lastName:body.date,
-        phone:body.description,
-        terms:body.terms,
-        filing:body.filing
+        lastName:body.lastName,
+        phone:body.phone,
+        filing:body.filing,
+        vehicleId:body.vehicleId,
+        dealerId
     }
-    const createPost = dealerServices.createPost(newPost);
-    res.status(201).send({status:"OK", data:createPost})
+    console.log(newLead)
+    try {
+        const createLead = dealerServices.createLead(newLead);
+        res.status(201).send({status:"OK", data:createLead})
+    } catch (error) {
+        res.status(500).send({error})
+    }
+        
 };
 
 const updateLead = (req,res) => {
@@ -250,11 +345,18 @@ module.exports = {
     createDealer,
     updateDealer,
     deleteDealer,
+    getAllVehicles,
+    getAllVehiclesByDealerId,
     getVehicleById,
     createVehicle,
     updateVehicle,
     deleteVehicle,
-    getAccesory,
+    getAllVariants,
+    getVariantById,
+    createVariant,
+    updateVariant,
+    deleteVariant,
+    getAccesoryById,
     createAccesory,
     updateAccesory,
     deleteAccesory,

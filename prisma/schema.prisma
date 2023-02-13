@@ -27,11 +27,12 @@ model Leads{
   email       String @unique
   name        String
   lastName    String
-  phone       Int 
+  phone       String
   filing      String
   dealer      Dealer @relation(fields: [dealerId],references: [id])
+  vehicle     Vehicles @relation(fields: [vehicleId],references: [id])
+  vehicleId   Int
   dealerId    Int
-  terms       Boolean 
 }
 
 model Post{
@@ -60,6 +61,7 @@ model Vehicles{
   fuelType     FuelType   
   bodyType     Body
   identifier   String @unique
+  leads        Leads[]
 }
 
 model Accessory{

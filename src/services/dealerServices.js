@@ -44,8 +44,31 @@ const deleteDealer = (id) => {
     return dealer;
 }
 
+const getAllVehicles = async () => {
+    const allDealers = await prisma.vehicles.findMany({
+        include:{var:true}
+    });
+    return allDealers;
+};
+
+
+const getAllVehiclesByDealerId = (id) => {
+    const vehicles = prisma.vehicles.findMany({
+        where:{dealerId:parseInt(id)},
+        include:{var:true}}
+        );
+    if (!vehicles){
+        return;
+    }
+    return vehicles;
+
+}
+
 const getVehicleById = (id) => {
-    const vehicle = prisma.vehicles.findUnique({where:{id:id}});
+    const vehicle = prisma.vehicles.findUnique({
+        where:{id:parseInt(id)},
+        include:{var:true}
+    });
     if (!vehicle){
         return;
     }
@@ -75,6 +98,54 @@ const updateVehicle = (id,body) => {
 
 const deleteVehicle = (id) => {
     const vehicle = prisma.vehicles.delete({
+        where:{id:id},
+    });
+    if(!vehicle){
+        return
+    }
+    return vehicle;
+}
+
+const getAllVariants = (id) => {
+    const vehicles = prisma.variants.findMany({where:{vehicleId:parseInt(id)}});
+    if (!vehicles){
+        return;
+    }
+    return vehicles;
+
+}
+
+const getVariantById = (id) => {
+    const vehicle = prisma.variants.findUnique({where:{id:id}});
+    if (!vehicle){
+        return;
+    }
+    return vehicle;
+
+}
+
+const createVariant = (newVariant) => {
+    const vehicle = prisma.variants.create({
+        data:newVariant
+    });
+    return vehicle;
+
+}
+
+const updateVariant = (id,body) => {
+    const vehicle = prisma.variants.update({
+        where:{id:id},
+        data:body
+    });
+    if(!vehicle){
+        return
+    }
+    return vehicle;
+
+}
+
+const deleteVariant = (id) => {
+    const vehicle = prisma.variants.delete({
         where:{id:id},
     });
     if(!vehicle){
@@ -170,11 +241,11 @@ const getLeadById = (id) => {
 
 }
 
-const createLead = (newPost) => {
-    const post = prisma.leads.create({
-        data:newPost
+const createLead = async (newLead) => {
+    const lead = await prisma.leads.create({
+        data:newLead
     });
-    return post;
+    return lead;
 
 }
 
@@ -206,10 +277,17 @@ module.exports = {
     createDealer,
     updateDealer,
     deleteDealer,
+    getAllVehicles,
+    getAllVehiclesByDealerId,
     getVehicleById,
     createVehicle,
     updateVehicle,
     deleteVehicle,
+    getAllVariants,
+    getVariantById,
+    createVariant,
+    updateVariant,
+    deleteVariant,
     getAccesoryById,
     createAccesory,
     updateAccesory,

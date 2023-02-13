@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3200;
 const v1DealerRouter = require("./v1/routes/dealerRoutes");
 
 app.use(express.json());
+app.use(cors({origin:"*"}));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
