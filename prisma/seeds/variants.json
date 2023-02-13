@@ -4,286 +4,286 @@
         "price":3599000,
         "reserved":50000,
         "vehicleId":1,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XLS PACK 1.5 6M/T 5P",
         "price":4234000,
         "reserved":50000,
         "vehicleId":1,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"X 1.5 6M/T 4P",
         "price":3716000,
         "reserved":50000,
         "vehicleId":2,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XLS PACK 1.5 6M/T 4P",
         "price":4351000,
         "reserved":50000,
         "vehicleId":2,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XS MT",
         "price":4522000,
         "reserved":50000,
         "vehicleId":3,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XLS MT",
         "price":4992000,
         "reserved":50000,
         "vehicleId":3,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XLS MT",
         "price":509500,
         "reserved":50000,
         "vehicleId":4,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"L1H1 2.8 TDI 6AT 3A",
         "price":14992000,
         "reserved":50000,
         "vehicleId":5,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"L2H2 2.8 TDI 6AT 3A",
         "price":1559500,
         "reserved":50000,
         "vehicleId":5,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"2.0 XLI MT",
         "price":5582000,
         "reserved":50000,
         "vehicleId":6,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"HEV 1.8 XEI eCVT",
         "price":8022000,
         "reserved":50000,
         "vehicleId":7,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"HEV 1.8 SEG eCVT",
         "price":9268000,
         "reserved":50000,
         "vehicleId":7,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"HV 2.5 eCVT",
         "price":10268000,
         "reserved":50000,
         "vehicleId":8,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4X2",
         "price":6939000,
         "reserved":50000,
         "vehicleId":9,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4X4",
         "price":8370000,
         "reserved":50000,
         "vehicleId":9,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"2.0 XLI CVT",
         "price":7720000,
         "reserved":50000,
         "vehicleId":10,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"2.0 XEI CVT",
         "price":8897000,
         "reserved":50000,
         "vehicleId":10,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"2.0 SEG CVT",
         "price":10061000,
         "reserved":50000,
         "vehicleId":10,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"HV 1.8 eCVT",
         "price":10061000,
         "reserved":50000,
         "vehicleId":11,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"HV AWD Limited",
         "price":11061000,
         "reserved":50000,
         "vehicleId":12,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"SRX 2.8 TDI 6 A/T 7A",
         "price":17163000,
         "reserved":50000,
         "vehicleId":13,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DIAMOND 2.8 TDI 6 AT 7A",
         "price":18014000,
         "reserved":50000,
         "vehicleId":13,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"VX",
         "price":15014000,
         "reserved":50000,
         "vehicleId":14,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"1.5 6M/T",
         "price":3432000,
         "reserved":50000,
         "vehicleId":15,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"2.8 TDI 6AT 10A",
         "price":12281500,
         "reserved":50000,
         "vehicleId":16,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"2.8 TDI 6 AT 7A",
         "price":18875000,
         "reserved":50000,
         "vehicleId":17,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"VX",
         "price":18875000,
         "reserved":50000,
         "vehicleId":18,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4x2",
         "price":8215000,
         "reserved":50000,
         "vehicleId":19,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"SRV 4x2",
         "price":10913000,
         "reserved":50000,
         "vehicleId":19,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4x4",
         "price":9576000,
         "reserved":50000,
         "vehicleId":19,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"SR 4x4",
         "price":11188000,
         "reserved":50000,
         "vehicleId":19,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4x2",
         "price":7345000,
         "reserved":50000,
         "vehicleId":20,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4x4",
         "price":8746000,
         "reserved":50000,
         "vehicleId":20,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"2.0 CVT",
         "price":8462000,
         "reserved":50000,
         "vehicleId":21,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4x2",
         "price":6939000,
         "reserved":50000,
         "vehicleId":22,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"DX 4x4",
         "price":8370000,
         "reserved":50000,
         "vehicleId":22,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"X 1.5 6M/T 5P",
         "price":3599000,
         "reserved":50000,
         "vehicleId":23,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XLS PACK 1.5 6M/T 5P",
         "price":4234000,
         "reserved":50000,
         "vehicleId":23,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"GR-S",
         "price":14234000,
         "reserved":50000,
         "vehicleId":24,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XS MT",
         "price":4522000,
         "reserved":50000,
         "vehicleId":25,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     },
     {
         "name":"XLS MT",
         "price":4992000,
         "reserved":50000,
         "vehicleId":25,
-        "photo":[]
+        "photo":["https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp","https://res.cloudinary.com/dzmgycgym/image/upload/v1676171247/small_etios_hatchback_x_m_t_frontal_040_c170733913_lg8xin.webp"]
     }
 ]

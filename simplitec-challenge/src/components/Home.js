@@ -25,7 +25,7 @@ const Home = () => {
       </div>
       <div className='flex'>
         <div className='h-full w-1/3'>
-          <Filter/>
+          <Filter vehicles={vehicles}/>
         </div>
         <div className='mt-5'>
             {!loading && <CardList vehicles={vehicles}/>} 
