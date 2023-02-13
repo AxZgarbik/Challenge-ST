@@ -299,7 +299,7 @@ const getLeadById = (req,res) => {
     res.send({status:"OK", data: oneLead})
 }
 
-const createLead = (req,res) => {
+const createLead = async (req,res) => {
     const dealerId = Number(req.params.id)
     const {body} = req;
     if(
@@ -322,9 +322,8 @@ const createLead = (req,res) => {
         vehicleId:body.vehicleId,
         dealerId
     }
-    console.log(newLead)
     try {
-        const createLead = dealerServices.createLead(newLead);
+        const createLead = await dealerServices.createLead(newLead);
         res.status(201).send({status:"OK", data:createLead})
     } catch (error) {
         res.status(500).send({error})

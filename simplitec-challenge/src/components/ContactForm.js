@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from 'axios'
 
 function ContactForm({ dealerId,vehicleId }) {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function ContactForm({ dealerId,vehicleId }) {
     lastName: "",
     email: "",
     phone: "",
-    filing: ""
+    filing: "",
   });
 
   const handleInputChange = (event) => {
@@ -25,20 +26,18 @@ function ContactForm({ dealerId,vehicleId }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
   };
 
   const sendLead = async () => {
     const url = `http://localhost:3200/dealer/${dealerId}/leads`;
-    const response = await fetch(url, {
-      method: "POST",
-      mode:'cors',
-      headers: { "Content-type": "application/json;charset=UTF-8",'Access-Control-Allow-Origin': '*' },
-      body:{...formData,vehicleId}
-    });
-    console.log(response);
-    if (response.status === 200) {
-      navigate("/lead");
+    try {
+      const response = await axios.post(url, {...formData,vehicleId});
+      console.log(response);
+      if (response.status === 201) {
+        navigate("/lead");
+      }
+    } catch (error) {
+      console.error(error);
     }
   };
   return (
